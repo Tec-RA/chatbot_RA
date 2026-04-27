@@ -2125,7 +2125,7 @@ def main():
             "",
             opcoes_menu,
             index=opcoes_menu.index(st.session_state.pagina) if st.session_state.pagina in opcoes_menu else 0,
-            key="sidebar_navigation",
+            key=f"sidebar_navigation_{st.session_state.banco_selecionado}_{st.session_state.pagina}",
         )
 
         if pagina != st.session_state.pagina:
